@@ -13,6 +13,17 @@ jobs:
       runs-on: ubuntu-latest
       steps: 
          - uses: actions/checkout@v2
+         - name: hello world
+           run: echo "Hello World"
+           shell: bash
+
+   second-job: 
+     runs-on: ubuntu-latest
+     steps:
+        - name: run some random command
+          run: echo "done running second step"
+          shell: bash
+          
          
   
      
