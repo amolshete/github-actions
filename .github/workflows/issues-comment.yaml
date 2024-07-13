@@ -7,6 +7,6 @@ jobs:
      runs-on: ubuntu-latest
      steps: 
           - name: dump the github context
-            run: echo '${{ toJSON(github.event) }}'
+            run: echo '${{ toJSON(github.event) }}' | jq
             shell: bash
     
