@@ -25,6 +25,10 @@ jobs:
            run: echo "Global variable- $GLOBAL_VAR"
          - name: print job variable
            run: echo "JOB variable- $JOb_SPECIFIC"
+         - name: user secret variable
+           run: echo "Secret is - $DB_PASSWORD"  
+           env:
+             DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
      
 
          
