@@ -29,6 +29,10 @@ jobs:
            run: echo "Secret is - $DB_PASSWORD"  
            env:
              DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+         - name: user variable from setting option
+           run: echo "variable is - $APP_ENV"  
+           env:
+             APP_ENV: ${{ vars.APP_ENV }}    
      
 
          
