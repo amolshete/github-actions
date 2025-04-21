@@ -15,12 +15,17 @@ jobs:
       runs-on: ubuntu-latest
       env: 
         JOb_SPECIFIC: 'I am job specific'
-      steps: 
+      steps:
+         - name: step with env var
+           env: 
+             STEP_VAR: 'I am step specific'
+           run: echo "step variable- $STEP_VAR"  
          - uses: actions/checkout@v2
          - name: print global variable
            run: echo "Global variable- $GLOBAL_VAR"
          - name: print job variable
            run: echo "JOB variable- $JOb_SPECIFIC"
+     
 
          
   
