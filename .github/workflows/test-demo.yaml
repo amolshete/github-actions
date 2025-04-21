@@ -14,13 +14,13 @@ jobs:
    hello-job:
       runs-on: ubuntu-latest
       env: 
-        JOb-SPECIFIC: "I am job specific"
+        JOb_SPECIFIC: 'I am job specific'
       steps: 
          - uses: actions/checkout@v2
          - name: print global variable
            run: echo "Global variable- $GLOBAL_VAR"
          - name: print job variable
-           run: echo "JOB varibale- $JOb-SPECIFIC"
+           run: echo "JOB variable- $JOb_SPECIFIC"
 
          
   
